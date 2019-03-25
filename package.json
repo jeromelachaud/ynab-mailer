@@ -23,5 +23,8 @@
   "devDependencies": {
     "eslint": "^5.15.2",
     "eslint-plugin-promise": "^4.0.1"
+  },
+  "engines": {
+    "node": "8.11.3"
   }
 }
