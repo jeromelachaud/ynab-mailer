@@ -25,6 +25,8 @@ module.exports = () => {
         },
       } = response
 
+      if (transactions.length < 1) return
+
       const filteredTransactions = transactions
         .filter(
           transaction =>
