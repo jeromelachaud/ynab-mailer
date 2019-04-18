@@ -55,7 +55,7 @@ module.exports = () => {
 
       email
         .send({
-          template: 'mars',
+          template: 'daily',
           locals: {
             message: 'Coucou 🤗, voici les dépenses du jour 😇',
             filteredTransactions,
