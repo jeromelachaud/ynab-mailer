@@ -4,8 +4,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start:dev": "DEBUG=email-templates nodemon index.js",
-    "start": "node index.js"
+    "app:dev": "DEBUG=email-templates nodemon index.js",
+    "app": "node index.js"
   },
   "keywords": [],
   "author": "",
