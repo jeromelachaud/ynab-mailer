@@ -1,3 +1,4 @@
 node_modules
 ynab-mailer.paw
 .env
+coverage

@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "app:dev": "DEBUG=email-templates nodemon index.js",
-    "app": "node index.js"
+    "app": "node index.js",
+    "test": "jest",
+    "test:dev": "jest --watch",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -22,7 +25,8 @@
   },
   "devDependencies": {
     "eslint": "^5.15.2",
-    "eslint-plugin-promise": "^4.0.1"
+    "eslint-plugin-promise": "^4.0.1",
+    "jest": "^24.7.1"
   },
   "engines": {
     "node": "8.11.3"
