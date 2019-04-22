@@ -19,10 +19,18 @@ const app =
           )
           mailTransactions(transactions, 'monthly')
         })
+        schedule.scheduleJob('2 10 * * 1', async () => {
+          const transactions = await fetchTransactions(
+            'sinceMondayOfThePreviousWeek'
+          )
+          mailTransactions(transactions, 'weekly')
+        })
       }
     : async () => {
-        const transactions = await fetchTransactions('sinceYesterday')
-        mailTransactions(transactions, 'monthly')
+        const transactions = await fetchTransactions(
+          'sinceMondayOfThePreviousWeek'
+        )
+        mailTransactions(transactions, 'weekly')
       }
 
 app()

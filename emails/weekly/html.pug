@@ -1,0 +1,35 @@
+style.
+  body {
+    background-color: #ff07070f;
+    padding: 2rem
+  }
+  .container {
+    font-family: arial;
+    width: 90%;
+    margin: 0 auto;
+
+  }
+  .table {
+    width: 100%;
+    margin: 0 auto;
+  }
+  thead {
+    text-align: left;
+  }
+head
+  title My Site
+  link(rel="stylesheet" href='https://unpkg.com/purecss@1.0.0/build/pure-min.css')
+  body
+    div(class='container')
+      p(class='weekly.message') #{weekly.message}
+      table(class='table pure-table pure-table-horizontal')
+        thead
+          tr
+            th Catégorie
+            th Memo
+            th Montant
+        for transaction in filteredTransactions
+          tr
+            td= transaction.category_name
+            td= transaction.memo
+            td= transaction.amount

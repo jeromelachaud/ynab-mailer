@@ -16,4 +16,12 @@ describe('Date Helpers functions', () => {
       ).toBe('1995-11-1')
     })
   })
+
+  describe('sinceMondayOfThePreviousWeek', () => {
+    it('should return the first date of the previous week', async () => {
+      expect(
+        dateHelpers.getMondayOfThePreviousWeek('December 20, 1995 03:24:00')
+      ).toBe('1995-12-11')
+    })
+  })
 })
