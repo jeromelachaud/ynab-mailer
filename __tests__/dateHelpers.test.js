@@ -2,7 +2,7 @@ const dateHelpers = require('../lib/dateHelpers')
 
 describe('Date Helpers functions', () => {
   describe('getYesterdaysDate', () => {
-    it('should return the date of yesterday', async () => {
+    it('should return the date of yesterday', () => {
       expect(dateHelpers.getYesterdaysDate('December 17, 1995 03:24:00')).toBe(
         '1995-12-16'
       )
@@ -10,7 +10,7 @@ describe('Date Helpers functions', () => {
   })
 
   describe('getFirstDateOfThePreviousMonth', () => {
-    it('should return the first date of the previous month', async () => {
+    it('should return the first date of the previous month', () => {
       expect(
         dateHelpers.getFirstDateOfThePreviousMonth('December 17, 1995 03:24:00')
       ).toBe('1995-11-1')
@@ -18,7 +18,7 @@ describe('Date Helpers functions', () => {
   })
 
   describe('sinceMondayOfThePreviousWeek', () => {
-    it('should return the first date of the previous week', async () => {
+    it('should return the first date of the previous week', () => {
       expect(
         dateHelpers.getMondayOfThePreviousWeek('December 20, 1995 03:24:00')
       ).toBe('1995-12-11')
