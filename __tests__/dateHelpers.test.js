@@ -2,7 +2,8 @@ const dateHelpers = require('../lib/dateHelpers')
 
 describe('Date Helpers functions', () => {
   describe('getYesterdaysDate', () => {
-    it('should return the date of yesterday', () => {
+    // eslint-disable-next-line quotes
+    it("should return yesterday's death", () => {
       expect(dateHelpers.getYesterdaysDate('December 17, 1995 03:24:00')).toBe(
         '1995-12-16'
       )
