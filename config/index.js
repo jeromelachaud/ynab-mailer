@@ -1,7 +1,11 @@
 module.exports = {
-  token: `Bearer ${process.env.YARN_API_KEY}`,
+  token: `Bearer ${process.env.YNAB_API_KEY}`,
   budgetId: process.env.BUDGET_ID,
   accountId: process.env.ACCOUNT_ID,
+  emailRecipient1: process.env.EMAIL_RECIPIENT_1,
+  emailRecipient2: process.env.EMAIL_RECIPIENT_2,
+  emailSender: process.env.EMAIL_SENDER,
+  emailReplyTo: process.env.EMAIL_REPLY_TO,
   smtpSettings: {
     development: {
       transporter: {
