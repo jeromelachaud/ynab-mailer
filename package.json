@@ -1,11 +1,11 @@
 {
-  "name": "ynab-app",
-  "version": "1.0.0",
+  "name": "ynab-mailer",
+  "version": "1.1.0",
   "private": true,
   "main": "index.js",
   "scripts": {
-    "app:dev": "DEBUG=email-templates nodemon index.js",
-    "app": "node index.js",
+    "start:dev": "DEBUG=email-templates nodemon index.js",
+    "start": "NODE_ENV=Production node index.js",
     "test": "jest",
     "test:dev": "jest --watch",
     "lint": "eslint ."
