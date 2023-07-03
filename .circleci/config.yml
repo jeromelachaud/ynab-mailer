@@ -4,17 +4,6 @@ orbs:
   node: circleci/node@5.1.0
 
 jobs:
-  build:
-    executor:
-      name: node/default
-      tag: '16.14'
-    steps:
-      - checkout
-      - node/install-packages
-      - run:
-          command: npm run start
-          name: Start app
-
   unit-tests:
     executor:
       name: node/default
@@ -29,5 +18,4 @@ jobs:
 workflows:
   build_and_test:
     jobs:
-      - build
       - unit-tests
