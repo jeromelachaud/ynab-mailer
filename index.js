@@ -2,7 +2,7 @@
 require('dotenv').config()
 const schedule = require('node-schedule')
 const config = require('./config')
-const fetchTransactions = params => require('./lib/fetch')(params)
+const fetchTransactions = (params) => require('./lib/fetch')(params)
 const mailTransactions = (transactions, template, recipient) =>
   require('./lib/mailer')(transactions, template, recipient)
 
