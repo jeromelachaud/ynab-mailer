@@ -1,33 +1,33 @@
-version: 2
+version: 2.1
+
+orbs:
+  node: circleci/node@5.1.0
+
 jobs:
   build:
-    docker:
-      - image: circleci/node:8.11.3
-
-    working_directory: ~/repo
-
+    executor:
+      name: node/default
+      tag: '16.14'
     steps:
       - checkout
-
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package-lock.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
+      - node/install-packages
       - run:
-          name: Installing Dependencies
-          command: npm install
+          command: npm run start
+          name: Start app
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
-
+  unit-tests:
+    executor:
+      name: node/default
+      tag: '16.14'
+    steps:
+      - checkout
+      - node/install-packages
       - run:
-          name: Run unit tests
-          command: npm run test --ci
+          command: npm test
+          name: Unit tests
 
-      - run:
-          name: ESLint
-          command: npm run lint
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - unit-tests
