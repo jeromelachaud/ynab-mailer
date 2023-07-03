@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^1.0.0",
     "currency-formatter": "^1.5.9",
     "dotenv": "^16.3.1",
     "email-templates": "^11.1.1",
