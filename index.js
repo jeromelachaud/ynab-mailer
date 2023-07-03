@@ -17,19 +17,13 @@ const app =
           const transactions = await fetchTransactions(
             'sinceFirstDateOfThePreviousMonth'
           )
-          mailTransactions(transactions, 'monthly', [
-            config.emailRecipient1,
-            config.emailRecipient2,
-          ])
+          mailTransactions(transactions, 'monthly', [config.emailRecipient1])
         })
         schedule.scheduleJob('2 10 * * 1', async () => {
           const transactions = await fetchTransactions(
             'sinceMondayOfThePreviousWeek'
           )
-          mailTransactions(transactions, 'weekly', [
-            config.emailRecipient1,
-            config.emailRecipient2,
-          ])
+          mailTransactions(transactions, 'weekly', [config.emailRecipient1])
         })
       }
     : async () => {
