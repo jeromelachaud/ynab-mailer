@@ -15,7 +15,19 @@ jobs:
           command: npm test
           name: Unit tests
 
+  lint:
+    executor:
+      name: node/default
+      tag: '16.14'
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run lint
+          name: Linter
+
 workflows:
-  build_and_test:
+  test_and_lint:
     jobs:
       - unit-tests
+      - lint
