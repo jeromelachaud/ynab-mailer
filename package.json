@@ -17,7 +17,7 @@
     "axios": "^1.0.0",
     "currency-formatter": "^1.5.9",
     "dotenv": "^17.0.0",
-    "email-templates": "^12.0.1",
+    "email-templates": "^12.0.3",
     "node-schedule": "^2.1.1",
     "nodemailer": "^7.0.0",
     "nodemon": "^3.0.1",
@@ -26,8 +26,8 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.38.0",
-    "eslint-plugin-promise": "^7.1.0",
     "eslint": "^9.13.0",
+    "eslint-plugin-promise": "^7.1.0",
     "globals": "^16.4.0",
     "jest": "^30.0.0"
   },
